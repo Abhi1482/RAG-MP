@@ -1,0 +1,65 @@
+# Prerequisites
+*.py[cod]
+*$py.class
+
+# Python cache
+__pycache__/
+.pytest_cache/
+
+# Virtual Environments (DO NOT commit these)
+venv/
+env/
+.venv/
+Pipfile.lock
+
+# Environment variables and secrets (CRUCIAL: Keep API keys out of version control)
+.env
+.env.*
+*.pem
+
+# Jupyter Notebooks
+.ipynb_checkpoints/
+
+# IDE and Editor directories
+.vscode/
+.idea/
+*.swp
+*.swo
+
+# OS generated files
+.DS_Store
+.DS_Store?
+._*
+.Spotlight-V100
+.Trashes
+ehthumbs.db
+Thumbs.db
+
+# Logs and databases
+*.log
+*.sqlite3
+
+# ---------------------------------------------------
+# Project Specific (Adjust these to fit your structure)
+# ---------------------------------------------------
+
+# Data and models (Avoid pushing large datasets or model weights)
+data/
+datasets/
+models/
+*.bin
+*.pt
+*.pth
+*.h5
+*.pkl
+
+# Local Vector Databases (e.g., ChromaDB, FAISS)
+chroma_db/
+vector_store/
+*.faiss
+
+# Output or temporary directories
+out/
+build/
+dist/
+temp/
