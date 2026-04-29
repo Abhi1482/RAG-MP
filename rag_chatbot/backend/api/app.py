@@ -10,8 +10,7 @@ from typing import List, Dict, Any
 # Add backend directory to sys.path for sibling imports
 sys.path.insert(0, os.path.dirname(os.path.dirname(os.path.abspath(__file__))))
 from config import config
-from scripts.retrieve import Retriever
-from scripts.generate import Generator
+
 
 # Logging Setup
 logging.basicConfig(
@@ -39,6 +38,9 @@ def get_rag():
     global retriever, generator
     if retriever is None or generator is None:
         try:
+            from scripts.retrieve import Retriever
+            from scripts.generate import Generator
+            
             retriever = Retriever()
             generator = Generator()
             logger.info("RAG components lazily initialized successfully.")
