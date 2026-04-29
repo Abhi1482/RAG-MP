@@ -31,7 +31,7 @@ function EmptyState({ onQuerySelect }) {
         RAG Academic Chatbot
       </h2>
       <p className="text-rag-muted text-sm text-center max-w-lg mb-1">
-        Comparative Evaluation of Intent-Based vs RAG-Based Academic Chatbots
+        Research-Grade RAG-Based Academic Chatbot System
       </p>
       <p className="text-rag-muted/60 text-xs text-center max-w-md mb-10 leading-relaxed">
         Ask questions about your indexed documents. The system retrieves relevant

@@ -1,6 +1,6 @@
 # 🔬 RAG Academic Chatbot
 
-> **Comparative Evaluation of Intent-Based vs RAG-Based Academic Chatbots**
+> **Research-Grade RAG-Based Academic Chatbot System**
 
 A research-grade **Retrieval-Augmented Generation (RAG)** chatbot system designed for academic document querying. The system ingests institutional documents (PDFs and text files), processes them into semantically searchable chunks, and generates grounded, hallucination-controlled responses using Google's Gemini LLM — all served through a modern React-based interface.
 
