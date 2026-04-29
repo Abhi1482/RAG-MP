@@ -26,7 +26,7 @@ class Config:
     FAISS_INDEX_PATH = os.path.join(EMBEDDINGS_DIR, "faiss_index.bin")
     
     # API Settings
-    API_KEY = os.getenv("GEMINI_API_KEY")
+    API_KEY = os.getenv("GOOGLE_API_KEY", os.getenv("GEMINI_API_KEY"))
     LOG_LEVEL = os.getenv("LOG_LEVEL", "INFO")
 
 config = Config()
