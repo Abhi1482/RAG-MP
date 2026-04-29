@@ -1,32 +1,46 @@
-# Prerequisites
+# ===== SECURITY: Secrets & API Keys =====
+.env
+.env.*
+.env.local
+.env.development
+.env.production
+*.pem
+*.key
+*.crt
+*.p12
+*.pfx
+secrets/
+credentials/
+
+# ===== Python =====
 *.py[cod]
 *$py.class
-
-# Python cache
 __pycache__/
 .pytest_cache/
+*.egg-info/
+*.egg
+dist/
+build/
 
-# Virtual Environments (DO NOT commit these)
+# ===== Virtual Environments =====
 venv/
 env/
 .venv/
 Pipfile.lock
 
-# Environment variables and secrets (CRUCIAL: Keep API keys out of version control)
-.env
-.env.*
-*.pem
-
-# Jupyter Notebooks
+# ===== Jupyter =====
 .ipynb_checkpoints/
 
-# IDE and Editor directories
+# ===== IDE & Editor =====
 .vscode/
 .idea/
 *.swp
 *.swo
+*.sublime-*
+.project
+.classpath
 
-# OS generated files
+# ===== OS Generated =====
 .DS_Store
 .DS_Store?
 ._*
@@ -34,16 +48,20 @@ Pipfile.lock
 .Trashes
 ehthumbs.db
 Thumbs.db
+desktop.ini
 
-# Logs and databases
+# ===== Logs & Databases =====
 *.log
 *.sqlite3
+rag_system.log
 
-# ---------------------------------------------------
-# Project Specific (Adjust these to fit your structure)
-# ---------------------------------------------------
+# ===== Debug Files =====
+*debug*.txt
+*debug*.py
+model_debug*
+Debugging*.md
 
-# Data and models (Avoid pushing large datasets or model weights)
+# ===== Data & Models (large files) =====
 data/
 datasets/
 models/
@@ -53,20 +71,21 @@ models/
 *.h5
 *.pkl
 
-# Local Vector Databases (e.g., ChromaDB, FAISS)
+# ===== Vector Databases =====
 chroma_db/
 vector_store/
 *.faiss
 
-# Node.js
+# ===== Node.js =====
 node_modules/
 package-lock.json
 
-# Embeddings (generated, not source)
+# ===== Embeddings (generated) =====
 embeddings/
 
-# Output or temporary directories
+# ===== Build Output =====
 out/
 build/
 dist/
 temp/
+.next/
