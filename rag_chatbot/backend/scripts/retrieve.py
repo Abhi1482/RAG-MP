@@ -1,8 +1,13 @@
+import os
+import sys
 import json
 import numpy as np
 import faiss
 from typing import List, Dict
 from sentence_transformers import SentenceTransformer
+
+# Add backend directory to sys.path for sibling imports
+sys.path.insert(0, os.path.dirname(os.path.dirname(os.path.abspath(__file__))))
 from config import config
 
 class Retriever:

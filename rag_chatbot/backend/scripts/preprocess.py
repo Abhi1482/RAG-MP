@@ -1,8 +1,12 @@
 import os
+import sys
 import json
 import re
 from typing import List, Dict
 from pypdf import PdfReader
+
+# Add backend directory to sys.path for sibling imports
+sys.path.insert(0, os.path.dirname(os.path.dirname(os.path.abspath(__file__))))
 from config import config
 
 class Preprocessor:

@@ -58,6 +58,13 @@ chroma_db/
 vector_store/
 *.faiss
 
+# Node.js
+node_modules/
+package-lock.json
+
+# Embeddings (generated, not source)
+embeddings/
+
 # Output or temporary directories
 out/
 build/

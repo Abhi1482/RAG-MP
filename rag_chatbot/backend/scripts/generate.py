@@ -1,7 +1,11 @@
 import os
+import sys
 import time
 import google.generativeai as genai
 from typing import List, Dict, Optional
+
+# Add backend directory to sys.path for sibling imports
+sys.path.insert(0, os.path.dirname(os.path.dirname(os.path.abspath(__file__))))
 from config import config
 from scripts.retrieve import Retriever
 

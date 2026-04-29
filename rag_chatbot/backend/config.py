@@ -11,11 +11,11 @@ class Config:
     # RAG Configuration
     CHUNK_SIZE = 150
     CHUNK_OVERLAP = 50
-    TOP_K = 2
+    TOP_K = 10
     
     # Gemini Configuration
     TEMPERATURE = 0.2
-    MAX_OUTPUT_TOKENS = 512
+    MAX_OUTPUT_TOKENS = 2048
     
     # Paths
     BASE_DIR = os.path.dirname(os.path.abspath(__file__))
