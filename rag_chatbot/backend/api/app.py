@@ -31,15 +31,22 @@ app.add_middleware(
     allow_headers=["*"],
 )
 
-# Initialize RAG Components
-try:
-    retriever = Retriever()
-    generator = Generator()
-    logger.info("RAG components initialized successfully.")
-except Exception as e:
-    logger.error(f"Failed to initialize RAG components: {e}")
-    retriever = None
-    generator = None
+# Global variables for lazy initialization
+retriever = None
+generator = None
+
+def get_rag():
+    global retriever, generator
+    if retriever is None or generator is None:
+        try:
+            retriever = Retriever()
+            generator = Generator()
+            logger.info("RAG components lazily initialized successfully.")
+        except Exception as e:
+            logger.error(f"Failed to initialize RAG components: {e}")
+            retriever = None
+            generator = None
+    return retriever, generator
 
 class ChatRequest(BaseModel):
     query: str
@@ -54,6 +61,7 @@ class ChatResponse(BaseModel):
 
 @app.post("/chat", response_model=ChatResponse)
 async def chat(request: ChatRequest):
+    retriever, generator = get_rag()
     if retriever is None or generator is None:
         raise HTTPException(status_code=503, detail="RAG components not initialized. Check logs.")
     
