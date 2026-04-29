@@ -6,6 +6,14 @@ A research-grade **Retrieval-Augmented Generation (RAG)** chatbot system designe
 
 ---
 
+## 📸 Screenshots
+
+| Hero Section | Important Links | Chatbot Interaction |
+|:---:|:---:|:---:|
+| ![Hero Section](rag_chatbot/docs/screenshots/hero.png) | ![Important Links](rag_chatbot/docs/screenshots/links.png) | ![Chatbot Interaction](rag_chatbot/docs/screenshots/chat.png) |
+
+---
+
 ## 📋 Table of Contents
 
 - [Features](#-features)
